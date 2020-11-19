@@ -9,6 +9,7 @@ export const TopHeader = styled.header`
     position: fixed;
     top: 0;
     width: calc(100% - 20px);
+    z-index: 99;
     @media screen and (max-width: 768px){
         display: none;
     }
@@ -23,6 +24,7 @@ export const BottomHeader = styled.div`
     position: fixed;
     bottom: 0;
     width: calc(100% - 20px);
+    z-index: 99;
     @media screen and (min-width: 768px){
         display: none;
     }
