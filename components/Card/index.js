@@ -18,14 +18,14 @@ const Card = ({ cards }) => {
   return (
     <CardsList>
       {
-        _map(cards, ({id, authorName, authorImage, itemImage, itemName, price, currency, likesNumber, commentsNumber, itemDescription, tags, isFavourite}) => (
-          <CardWrapper key={id}>
-            <Author authorName={authorName} authorImage={authorImage}/>
-            <Image itemImage={itemImage} itemName={itemName} price={price} currency={currency} isFavourite={isFavourite}/>
+        _map(cards, ({_id, author_name, author_image, item_image, item_name, price, currency, likes_number, comments_number, item_description, tags, is_favourite}) => (
+          <CardWrapper key={_id}>
+            <Author authorName={author_name} authorImage={author_image}/>
+            <Image itemImage={item_image} itemName={item_name} price={price} currency={currency} isFavourite={is_favourite}/>
             <Content 
-              likesNumber={likesNumber}
-              commentsNumber={commentsNumber}
-              itemDescription={itemDescription}
+              likesNumber={likes_number}
+              commentsNumber={comments_number}
+              itemDescription={item_description}
               tags={tags}
             />
           </CardWrapper>
