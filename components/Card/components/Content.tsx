@@ -1,3 +1,4 @@
+import React from 'react';
 // components
 import Tags from './Tags';
 
@@ -11,7 +12,16 @@ import {
   Comments,
 } from '../styles';
 
-const Content = ({card}) => {
+interface Props {
+    card: {
+        likes_number: string, 
+        comments_number: string,
+        item_description: string,
+        tags: Array<string>
+    },
+  }
+
+const Content: React.FC<Props> = ({card}) => {
     const { likes_number, comments_number, item_description, tags } = card;
     return (
         <CardContent>

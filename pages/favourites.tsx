@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 // DB connect
 import dbConnect from '../utils/dbConnect';
 
@@ -22,7 +23,7 @@ const FavouritesPage = ({ favourites }) => (
 )
 
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async() => {
   await dbConnect()
 
   /* find all the data in our database */
@@ -34,4 +35,4 @@ export async function getServerSideProps() {
   };
 }
 
-export default FavouritesPage
+export default FavouritesPage;

@@ -1,9 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '../../../utils/dbConnect';
 import Favourite from '../../../models/Favourite';
 
 dbConnect();
 
-export default async (req, res) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req;
 
     switch (method) {

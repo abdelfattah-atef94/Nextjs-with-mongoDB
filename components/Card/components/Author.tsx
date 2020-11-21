@@ -1,3 +1,4 @@
+import React from 'react';
 // styles
 import {
   AuthorWrapper,
@@ -5,7 +6,14 @@ import {
   AuthorName,
 } from '../styles';
 
-const Author = ({ card }) => {
+interface Props {
+  card: {
+    author_name: string, 
+    author_image: string
+  },
+}
+
+const Author: React.FC<Props> = ({ card }) => {
   const { author_name, author_image } = card;
   return (
     <AuthorWrapper>

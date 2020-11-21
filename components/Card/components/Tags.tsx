@@ -1,3 +1,4 @@
+import React from 'react';
 // lodash
 import _map from 'lodash/map';
 
@@ -7,7 +8,11 @@ import {
     Tag
 } from '../styles';
 
-const Tags = ({ tags }) => {
+interface Props {
+    tags: Array<string>
+}
+
+const Tags: React.FC<Props> = ({ tags }) => {
     return (
         <TagsWrapper>
             {

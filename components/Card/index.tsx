@@ -1,3 +1,4 @@
+import React from 'react';
 import { useRouter } from "next/router";
 
 // lodash
@@ -16,7 +17,12 @@ import {
   CardWrapper,
 } from './styles';
 
-const Card = ({ cards }) => {
+interface Props {
+  cards: Array<string | number>,
+};
+
+
+const Card: React.FC<Props> = ({ cards }) => {
   const router = useRouter();
   const pathname = router.pathname;
   return (

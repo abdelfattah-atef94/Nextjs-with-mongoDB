@@ -15,7 +15,19 @@ import {
   DeleteBtn
 } from '../styles';
 
-const Image = ({ card, pathname }) => {
+interface Props {
+  card: {
+    _id: string,
+    item_image: string,
+    item_name: string,
+    currency: string
+    price: number,
+    is_favourite: boolean
+  },
+  pathname: string,
+}
+
+const Image: React.FC<Props> = ({ card, pathname}) => {
   const router = useRouter();
   const {_id, item_image, item_name, currency, price, is_favourite} = card;
   const [isLiked, setIsLiked] = useState(is_favourite);

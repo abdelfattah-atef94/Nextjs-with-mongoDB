@@ -1,3 +1,5 @@
+import React from 'react';
+
 import Head from 'next/head';
 
 // components
@@ -6,7 +8,11 @@ import Navbar from '../Navbar/index';
 // styles
 import { GlobalStyle, Content } from './styles';
 
-const Layout = ({ children, title = 'Noon' }) => (
+interface Props {
+  title: string,
+}
+
+const Layout: React.FC<Props> = ({ children, title = 'Noon' }) => (
   <div>
     <Head>
       <title>{title}</title>
