@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 import dbConnect from '../utils/dbConnect';
 
 // Card Model
-import FavouriteModel from '../models/Favourite';
+import Favourite from '../models/Favourite';
 
 // Components
 import Layout from '../components/Layout';
@@ -17,7 +17,9 @@ const FavouritesPage = ({ favourites }) => (
     }
     {
       favourites.length === 0 &&
-      <h1>Sorry there is no favourite data in this time</h1>
+      <h1 style={{textAlign: 'center'}}>
+        Sorry there is no favourite data in this time
+      </h1>
     }
   </Layout>
 )
@@ -27,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async() => {
   await dbConnect()
 
   /* find all the data in our database */
-  const data = await FavouriteModel.find({})
+  const data = await Favourite.find({})
   return {
     props: {
       favourites: JSON.parse(JSON.stringify(data))

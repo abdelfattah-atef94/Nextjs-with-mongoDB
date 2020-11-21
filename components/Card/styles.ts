@@ -47,7 +47,7 @@ export const AuthorImage = styled.img`
 `;
 
 export const AuthorName = styled.span`
-    color: blue;
+    color: #486EE0;
     font-weight: 500;
     font-size: 14px;
 `;
@@ -76,7 +76,7 @@ export const ImageContent = styled.div`
 `;
 
 export const Name = styled.p`
-    color: #999;
+    color: #FB619C;
     margin-top: 0;
     margin-bottom: 5px;
     font-size: 14px;
@@ -104,7 +104,7 @@ export const DeleteBtn = styled(Delete)`
 `;
 
 export const ContentLikeBtn = styled(HeartFill)`
-    color: blue;
+    color: #486EE0;
 `;
 
 export const CardContent = styled.div`
@@ -131,9 +131,9 @@ export const Description = styled.p`
 `;
 
 export const Comments = styled.p`
-    color: #ddd;
+    color: #999;
     margin: 0;
-    font-size: 14px;
+    font-size: 12px;
 `;
 
 export const TagsWrapper = styled.div`
@@ -147,4 +147,5 @@ export const TagsWrapper = styled.div`
 export const Tag = styled.span`
     margin-right: 5px;
     font-size: 14px;
+    color: #486EE0;
 `;

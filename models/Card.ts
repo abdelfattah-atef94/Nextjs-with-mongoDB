@@ -1,3 +1,4 @@
+export default{};
 const mongoose = require('mongoose');
 const CardSchema = new mongoose.Schema({
     author_name: {

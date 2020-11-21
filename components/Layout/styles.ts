@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 `
 export const Content = styled.section`
-    padding: 50px 20px;
+    padding: 70px 20px;
     @media screen and (max-width: 768px){
       padding: 20px 20px 80px;
     }
