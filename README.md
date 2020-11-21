@@ -6,8 +6,8 @@ The idea is so simple that we display some cards and make the use able to like t
 
 ## Commands to run the app
 
-- Download repo by run in your command line -> `git clone git@github.com:abdelfattah-atef94 Nextjs-with-nodejs.git`
-- cd `Nextjs-with-nodejs`
+- Download repo by run in your command line: `git clone git@github.com:abdelfattah-atef94 Nextjs-with-mongoDB.git`
+- cd `Nextjs-with-mongoDB`
 - run `npm install` to install all dependencies.
 - run `npm run dev` to run server and the app as well.
 
