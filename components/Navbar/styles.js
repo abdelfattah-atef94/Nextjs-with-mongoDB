@@ -32,12 +32,13 @@ export const BottomHeader = styled.div`
 
 export const HyperLink = styled.a`
     text-decoration: none;
-    color: #fff;
+    color: ${props => props.isSelected ? '#FB619C' : '#fff'}; ;
     padding: 6px;
     transition: 0.5s;
     cursor: pointer;
     border-radius: 2px;
     margin-right: 20px;
+    background-color: ${props => props.isSelected ? '#fff' : 'transparent'};
     &:last-child{
         margin-right: 0;
     }

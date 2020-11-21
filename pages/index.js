@@ -11,7 +11,6 @@ import Card from '../components/Card';
 const HomePage = ({ cards }) => {
   return (
     <Layout title="Noon Home">
-      <h1>Welocme to Home</h1>
       <Card cards={cards} />
     </Layout>
   );

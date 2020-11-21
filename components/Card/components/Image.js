@@ -22,7 +22,7 @@ const Image = ({ card, pathname }) => {
   const id = _id;
   const handleRemove = async () => {
     handleUpdate(false);
-    const deleted = await fetch(`http://localhost:3000/api/favourites/${id}`, {
+    await fetch(`http://localhost:3000/api/favourites/${id}`, {
       method: 'DELETE',
     });
     router.push('/favourites');
@@ -31,7 +31,7 @@ const Image = ({ card, pathname }) => {
   const handleLike = async(like) => {
     setIsLiked(like);
     if(like) {
-      const res = await fetch('http://localhost:3000/api/favourites', {
+      await fetch('http://localhost:3000/api/favourites', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -48,7 +48,7 @@ const Image = ({ card, pathname }) => {
       ...card,
       is_favourite: like,
     }
-    const updated = await fetch(`http://localhost:3000/api/cards/${id}`, {
+    await fetch(`http://localhost:3000/api/cards/${id}`, {
       method: 'PUT',
       headers: {
         'Accept': 'application/json',

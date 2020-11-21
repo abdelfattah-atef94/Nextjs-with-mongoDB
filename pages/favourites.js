@@ -10,7 +10,6 @@ import Card from '../components/Card';
 
 const FavouritesPage = ({ favourites }) => (
   <Layout title="Noon Favourites">
-    <h1>Welcome to Favourites</h1>
     {
       !!favourites.length &&
       <Card cards={favourites} />
