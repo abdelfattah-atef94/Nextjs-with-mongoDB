@@ -17,10 +17,9 @@ The idea is so simple that we display some cards and make the use able to like t
 - React
 - Typescript
 - Mongoose
-- Styled Components -> To style the components
-- styled Icons -> to use icons
-- isomorphic-unfetch -> to fetch data
-- Lodash -> to use some usefull functions
+- Styled Components
+- styled Icons
+- Lodash
 
 ## Project Structure:
 

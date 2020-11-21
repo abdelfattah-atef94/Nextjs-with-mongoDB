@@ -7,7 +7,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "isomorphic-unfetch": "^3.1.0",
     "lodash": "^4.17.20",
     "mongoose": "^5.10.15",
     "next": "latest",
