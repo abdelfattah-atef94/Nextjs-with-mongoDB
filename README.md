@@ -1,41 +1,43 @@
-# TypeScript Next.js example
+# Next.JS with Typescript and mongoDB
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+This is a simple example using NextJS, Typescriptand mongoDB.
 
-## Deploy your own
+The idea is so simple that we display some cards and make the use able to like this cards and when going to favourites page we should display the favourited cards.
 
-Deploy the example using [Vercel](https://vercel.com):
+## Commands to run the app
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
+- Download repo by run in your command line -> `git clone git@github.com:abdelfattah-atef94 Nextjs-with-nodejs.git`
+- cd `Nextjs-with-nodejs`
+- run `npm install` to install all dependencies.
+- run `npm run dev` to run server and the app as well.
 
-## How to use it?
+## Project Dependencies
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- NextJS
+- React
+- Typescript
+- Mongoose
+- Styled Components -> To style the components
+- styled Icons -> to use icons
+- isomorphic-unfetch -> to fetch data
+- Lodash -> to use some usefull functions
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
+## Project Structure:
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+- components
+  - Card.tsx
+  - Layout.tsx
+  - Navbar.tsx
+- models
+  - Card.ts
+  - Favourite.ts
+- pages
+  - index.tsx (Home page)
+  - favourites.tsx
+- utils
+  - dbConnect.ts
+- .gitignore
+- package-lock.json
+- package.json
+- README.md
+- tsconfig.json
