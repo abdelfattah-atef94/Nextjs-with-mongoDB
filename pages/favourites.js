@@ -2,7 +2,7 @@
 import dbConnect from '../utils/dbConnect';
 
 // Card Model
-import CardModel from '../models/Card';
+import FavouriteModel from '../models/Favourite';
 
 // Components
 import Layout from '../components/Layout';
@@ -27,10 +27,10 @@ export async function getServerSideProps() {
   await dbConnect()
 
   /* find all the data in our database */
-  const data = await CardModel.find({})
+  const data = await FavouriteModel.find({})
   return {
     props: {
-      favourites: JSON.parse(JSON.stringify(data)).filter(card => card.is_favourite)
+      favourites: JSON.parse(JSON.stringify(data))
     }
   };
 }

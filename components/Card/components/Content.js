@@ -11,16 +11,17 @@ import {
   Comments,
 } from '../styles';
 
-const Content = ({ likesNumber, commentsNumber, itemDescription, tags }) => {
+const Content = ({card}) => {
+    const { likes_number, comments_number, item_description, tags } = card;
     return (
         <CardContent>
             <LikesWrapper>
                 <ContentLikeBtn size={15} />
-                <LikeText>{likesNumber} likes</LikeText>
+                <LikeText>{likes_number} likes</LikeText>
             </LikesWrapper>
-            <Description>{itemDescription}</Description>
+            <Description>{item_description}</Description>
             <Tags tags={tags} />
-            <Comments>View {commentsNumber} comments</Comments>
+            <Comments>View {comments_number} comments</Comments>
         </CardContent>
     )
 }

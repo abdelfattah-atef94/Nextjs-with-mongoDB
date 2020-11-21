@@ -1,13 +1,13 @@
 // icons
 import {HeartFill} from '@styled-icons/bootstrap/HeartFill';
 import {Heart} from '@styled-icons/bootstrap/Heart';
-
+import {Delete} from '@styled-icons/material/Delete';
 import styled from 'styled-components';
 
 export const CardsList = styled.section`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     @media screen and (max-width: 768px){
         flex-direction: column;
@@ -21,6 +21,10 @@ export const CardWrapper = styled.div`
     background-color: #fff;
     box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    margin-right: 5%;
+    &:nth-child(3) {
+        margin-right: 0;
+    }
     @media screen and (max-width: 768px){
         width: 100%;
         margin-bottom: 20px;
@@ -90,6 +94,11 @@ export const ImageLikeBtn = styled(Heart)`
 `;
 
 export const ImageLikeBtnFilled = styled(HeartFill)`
+    color: #fff;
+    cursor: pointer;
+`;
+
+export const DeleteBtn = styled(Delete)`
     color: #fff;
     cursor: pointer;
 `;

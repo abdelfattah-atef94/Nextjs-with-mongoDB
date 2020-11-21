@@ -5,11 +5,12 @@ import {
   AuthorName,
 } from '../styles';
 
-const Author = ({ authorName, authorImage }) => {
+const Author = ({ card }) => {
+  const { author_name, author_image } = card;
   return (
     <AuthorWrapper>
-        <AuthorImage src={authorImage} />
-        <AuthorName>{authorName}</AuthorName>
+        <AuthorImage src={author_image} />
+        <AuthorName>{author_name}</AuthorName>
     </AuthorWrapper>
   )
 }

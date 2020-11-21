@@ -19,7 +19,7 @@ const HomePage = ({ cards }) => {
 
 
 export async function getServerSideProps() {
-  await dbConnect()
+  await dbConnect();
 
   /* find all the data in our database */
   const data = await CardModel.find({})
